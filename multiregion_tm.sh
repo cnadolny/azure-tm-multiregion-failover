@@ -49,7 +49,7 @@ az network public-ip update --ids $PUBLICIPID --dns-name $DNSNAME
 
 az -network traffic-manager endpoint create --name $LOCATION1-endpoint --profile-name $TM_NAME -g $TM_RG -t externalEndpoints --target $DNSNAME.$LOCATION1.cloudapp.azure.com --endpoint-location $LOCATION1
 
-#Next, for LOCATION2
+# Next, for LOCATION2
 az aks get-credentials -n $NAME2 -g $RG2
 
 kubectl run $MYNGINX --image=nginx --port=80
